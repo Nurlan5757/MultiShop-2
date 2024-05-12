@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ca.r214.13\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj": {}
+    "C:\\Users\\Hp\\OneDrive\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ca.r214.13\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj": {
+    "C:\\Users\\Hp\\OneDrive\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ca.r214.13\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\OneDrive\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "C:\\Users\\ca.r214.13\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj",
-        "packagesPath": "C:\\Users\\ca.r214.13\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ca.r214.13\\Desktop\\MultiShop\\WebApplication2\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\OneDrive\\Desktop\\MultiShop\\WebApplication2\\WebApplication2.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\OneDrive\\Desktop\\MultiShop\\WebApplication2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ca.r214.13\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
