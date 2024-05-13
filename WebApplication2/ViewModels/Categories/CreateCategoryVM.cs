@@ -1,8 +1,7 @@
 ﻿namespace WebApplication2.ViewModels.Categories
 {
-    public class GetCategoryVM
+    public class CreateCategoryVM
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
     }
