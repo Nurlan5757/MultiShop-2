@@ -70,14 +70,14 @@ namespace WebApplication2.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            public async Task<IActionResult> Delete(int? id, Category categoryToDelete)
+            public async Task<IActionResult> Delete(int? id, Category cd)
             {
                 if (id == null || id < 1) return BadRequest();
-                var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
-                if (category is null) return NotFound();
-                _context.Categories.Remove(category);
+                var Category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+                if (cd is null) return NotFound();
+                _context.Categories.Remove(cd);
                 await _context.SaveChangesAsync();
-               return RedirectToAction("Index");
+                return RedirectToAction("Index");
 
             }
     }
