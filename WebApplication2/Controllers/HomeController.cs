@@ -5,6 +5,7 @@ using WebApplication2.DataAccesLayer;
 using WebApplication2.Migrations;
 using WebApplication2.Models;
 using WebApplication2.ViewModels;
+using WebApplication2.ViewModels.Sliders;
 
 namespace WebApplication2.Controllers
 {
@@ -19,19 +20,18 @@ namespace WebApplication2.Controllers
         public async Task<IActionResult> Index()
         {
 
-            var sliders = await _context.Sliders.ToListAsync();
+            var data = await _context.Sliders
+               .Where(x => !x.IsDeleted)
+               .Select(s => new GetSliderVM
+               {
+                   Discount = s.Discount,
+                   Id = s.Id,
+                   ImageUrl = s.ImageUrl,
+                   Subtitle = s.Subtitle,
+                   Title = s.Title
+               }).ToListAsync();
 
-            var categories = await _context.Categories
-                                            .Where(x => !x.IsDeleted)
-                                            .ToListAsync();
-
-            HomeVM homeVM = new HomeVM
-            {
-                Sliders = sliders,
-                Categories = categories
-            };
-            return View(homeVM);
-
+            return View(data);
         }
         public IActionResult Contact()
         {

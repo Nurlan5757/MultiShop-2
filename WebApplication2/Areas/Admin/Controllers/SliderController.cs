@@ -13,6 +13,7 @@ namespace WebApplication2.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index()
         {
+
             var data=await _context.Sliders
                 .Where(x=> !x.IsDeleted)
                 .Select(s=> new GetSliderVM
@@ -52,9 +53,19 @@ namespace WebApplication2.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
-		public IActionResult Update()
+		public async Task<IActionResult> Update(int? id)
 		{
-			return View();
+            if (id == null || id < 1) return BadRequest();
+            Slider existed = await _context.Sliders.FirstOrDefaultAsync(s => s.Id == id);
+            if (existed is null) return NotFound();
+
+            UpdateSliderVM sliderVM=new UpdateSliderVM
+            {
+                ImageUrl = existed.ImageUrl,
+                Subtitle= existed.Subtitle,
+                Title = existed.Title
+            };
+            return View(sliderVM);
 		}
 
 		[HttpPost]
